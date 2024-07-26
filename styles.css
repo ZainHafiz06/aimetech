@@ -859,3 +859,20 @@ li, a {
 
     filter: drop-shadow(10px 10px 30px rgba(2, 136, 209, 0.5));
 }
+
+@media only screen
+and (width: 390px) 
+and (device-height: 844px)
+and (-webkit-device-pixel-ratio: 3) { }
+
+/*iPhone 14 Pro*/
+@media only screen
+    and (width: 393px) 
+    and (device-height: 852px)
+    and (-webkit-device-pixel-ratio: 3) { }
+
+/*iPhone 14 Pro Max*/
+@media only screen
+    and (device-width: 430px) 
+    and (device-height: 932px) 
+    and (-webkit-device-pixel-ratio: 3) { }
