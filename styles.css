@@ -859,3 +859,152 @@ li, a {
 
     filter: drop-shadow(10px 10px 30px rgba(2, 136, 209, 0.5));
 }
+
+/* Responsivness: Mobile */
+@media (max-width: 768px) {
+    .navBar {
+        align-items: center;
+    }
+
+    .navLinks li {
+        display: none;
+        padding: 10px 0;
+    }
+
+    .landingText h1 {
+        font-size: 50px;
+        width: 90%;
+    }
+
+    .landingText h2 {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .landingText h3 {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .landingText button {
+        width: 180px;
+        font-size: 18px;
+    }
+
+    .prodIntro img {
+        height: 300px;
+    }
+
+    .prodIntro h1 {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+
+    .prodIntro p {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .slds img {
+        height: 300px;
+    }
+
+    .carousel-button.prev, .carousel-button.next {
+        height: 50px;
+    }
+
+    .infoCards h1 {
+        font-size: 40px;
+    }
+
+    .infoCards p {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .conversions h1 {
+        font-size: 40px;
+    }
+
+    .circular-progress {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .circular-progress-1, .circular-progress-2, .circular-progress-3 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .percentageVisuals {
+        height: auto;
+        padding: 50px 15px;
+    }
+
+    .services {
+        height: auto;
+        padding: 50px 15px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .landingText h1 {
+        font-size: 70px;
+        width: 80%;
+    }
+
+    .landingText h2 {
+        font-size: 60px;
+        width: 80%;
+    }
+
+    .landingText h3 {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .prodIntro img {
+        height: 400px;
+    }
+
+    .prodIntro h1 {
+        font-size: 60px;
+    }
+
+    .prodIntro p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .slds img {
+        height: 400px;
+    }
+
+    .carousel-button.prev, .carousel-button.next {
+        height: 60px;
+    }
+
+    .infoCards h1 {
+        font-size: 60px;
+    }
+
+    .infoCards p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .conversions h1 {
+        font-size: 60px;
+    }
+
+    .circular-progress-1, .circular-progress-2, .circular-progress-3 {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+    /* Add any specific desktop styles if needed */
+}
