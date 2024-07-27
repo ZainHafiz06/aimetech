@@ -103,6 +103,7 @@ li, a {
 
 .navLinks {
     list-style: none;
+    overflow: hidden;
 }
 
 .navLinks li {
@@ -191,6 +192,10 @@ li, a {
 
 .contact:active {
     transform: scale(0.9);
+}
+
+.menu {
+    display: none;
 }
 
 /* Landing */
@@ -308,6 +313,8 @@ li, a {
     -webkit-mask-composite: destination-out;
     mask-composite: exclude; 
     pointer-events: none;
+
+    transition: ease 0.5s;
 }
 
 .landingText button:hover {
@@ -710,6 +717,7 @@ li, a {
 
 .servicesText {
     margin: 50px;
+    margin-bottom: 120px;
     text-align: right;
 
     font-family: 'Montserrat', sans-serif;
@@ -860,8 +868,42 @@ li, a {
     filter: drop-shadow(10px 10px 30px rgba(2, 136, 209, 0.5));
 }
 
+/* Compatibility: Our Prouct in Action */
+.prodInAction {
+    display: flex;
+    justify-content: center;
+
+    height: auto;
+    width: 100vw;
+}
+
+.prodInAction h1 {
+    margin: 100px 0;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #edf0f1;
+}
+
+.prodInAction span {
+    font-weight: 700;
+    color: transparent;
+
+    background: linear-gradient(90deg, #E4795A, #FFBB41);
+    -webkit-background-clip: text;
+}
+
 /* Responsivness: Mobile */
 @media (max-width: 768px) {
+    * {
+        overflow-x: none;
+    }
+
+    .cursor {
+        display: none;
+    }
+    
     .navBar {
         align-items: center;
     }
@@ -871,13 +913,26 @@ li, a {
         padding: 10px 0;
     }
 
+    .contact, .login {
+        display: none;
+    }
+
+    .navLogo, .menu {
+        margin: 5px 0;
+    }
+    
+    .menu {
+        display: flex;
+        height: 20px;
+    }
+
     .landingText h1 {
-        font-size: 50px;
+        font-size: 45px;
         width: 90%;
     }
 
     .landingText h2 {
-        font-size: 40px;
+        font-size: 35px;
         width: 90%;
     }
 
@@ -887,8 +942,8 @@ li, a {
     }
 
     .landingText button {
-        width: 180px;
-        font-size: 18px;
+        width: 170px;
+        font-size: 15px;
     }
 
     .prodIntro img {
@@ -896,13 +951,18 @@ li, a {
     }
 
     .prodIntro h1 {
-        margin-top: 10px;
-        font-size: 40px;
+        margin-top: -30px;
+        font-size: 50px;
     }
 
     .prodIntro p {
+        margin-top: -20px;
         width: 90%;
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .companyStats li {
+        display: block;
     }
 
     .slds img {
@@ -945,66 +1005,4 @@ li, a {
         height: auto;
         padding: 50px 15px;
     }
-}
-
-/* Tablet styles */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .landingText h1 {
-        font-size: 70px;
-        width: 80%;
-    }
-
-    .landingText h2 {
-        font-size: 60px;
-        width: 80%;
-    }
-
-    .landingText h3 {
-        font-size: 16px;
-        width: 80%;
-    }
-
-    .prodIntro img {
-        height: 400px;
-    }
-
-    .prodIntro h1 {
-        font-size: 60px;
-    }
-
-    .prodIntro p {
-        width: 80%;
-        font-size: 16px;
-    }
-
-    .slds img {
-        height: 400px;
-    }
-
-    .carousel-button.prev, .carousel-button.next {
-        height: 60px;
-    }
-
-    .infoCards h1 {
-        font-size: 60px;
-    }
-
-    .infoCards p {
-        width: 80%;
-        font-size: 16px;
-    }
-
-    .conversions h1 {
-        font-size: 60px;
-    }
-
-    .circular-progress-1, .circular-progress-2, .circular-progress-3 {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-/* Desktop styles */
-@media (min-width: 1025px) {
-    /* Add any specific desktop styles if needed */
 }
