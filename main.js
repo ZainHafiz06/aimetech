@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar Transition
     const navEl = document.querySelector('.navBar');
-    const navLi = document.querySelector('.navLinks');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY >= 2) {
