@@ -18,7 +18,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+        AOS.init({
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 400, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
     </script>
 
     <!-- SEO: Schema Markup -->
@@ -46,21 +54,29 @@
     </script>
     
     <!-- Cursor -->
-     <div class="cursor"></div>
+    <div class="cursor"></div>
 
     <!-- Navigation Bar -->
-    <header class="navBar">
-        <a href="index.html"><img class="navLogo" src="images/navBar/aimeLogo.png"></a>
-        <nav>
+    <header class="navbar">
+        <img class="navLogo" src="images/navBar/aimeLogoColor.png">
+        
+        <nav class="navContainer">
             <ul class="navLinks">
-                <li class="prod"><a href="#infoCards">Our Product</a></li>
-                <li><a href="#compatibility">Compatibility</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <div class="section1">
+                    <li><a href="#product">Our Product</a></li>
+                    <li><a href="#compatibility">Compatibility</a></li>
+                </div>
+
+                <a href="index.html"><img src="images/aime.png" class="navLogo2"></a>
+
+                <div class="section2">
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </div>
             </ul>
         </nav>
+        
         <div class="headerButtons">
-            <a href="#contact"><button class="contactButton">Contact Us</button></a>
             <a href="external/login.html"><button class="login">Log In</button></a>
             <a href="#"><img src="images/navBar/menuIcon.png" class="menu"></a>
         </div>
@@ -125,25 +141,33 @@
         <div class="prodDemos">
             <div class="demoSet1">
                 <div class="demoBox1" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="demoVideo1"></div>
+                    <div class="demoVideo1">
+                        <img src="">
+                    </div>
                 </div>
     
                 <div class="demoPlaceholder"></div>
     
                 <div class="demoBox2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="demoVideo2"></div>
+                    <div class="demoVideo2">
+                        <img src="">
+                    </div>
                 </div>
             </div>
     
             <div class="demoSet2">
                 <div class="demoBox3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="demoVideo3"></div>
+                    <div class="demoVideo3">
+                        <img src="">
+                    </div>
                 </div>
     
                 <div class="demoPlaceholder"></div>
     
                 <div class="demoBox4" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="demoVideo4"></div>
+                    <div class="demoVideo4">
+                        <img src="">
+                    </div>
                 </div>
             </div>
         </div>
