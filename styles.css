@@ -6,12 +6,13 @@
     margin: 0;
     padding: 0;
     
-    overflow-x: hidden;
     cursor: none;
 }
 
 body {
     background-color: black;
+    
+    overflow-x: hidden;
 }
 
 html {
@@ -54,18 +55,6 @@ html {
     }
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 100%;
-    }
-}
-
-@keyframes gradient {
-    100% {
-        background-position: right;
-    }
-}
-
 @keyframes colorChange {
     to {
         font-weight: 700;
@@ -73,6 +62,27 @@ html {
         color: transparent;
         background-image: linear-gradient(90deg, #E4795A, #FFBB41);
         -webkit-background-clip: text;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fontWeight {
+    from {
+        font-weight: 200;
+    }
+    to {
+        font-weight: 700;
+    }
+}
+
+@keyframes gradient {
+    100% {
+        background-position: right;
     }
 }
 
@@ -86,34 +96,33 @@ html {
     }
 }
 
-@keyframes fontWeight {
-    from {
-        font-weight: 200;
-    }
-    to {
-        font-weight: 700;
-    }
-}
+/* .gradient {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    
+    top: -150px;
+    height: 200px;
+    width: 100vw;
+
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+
+    background: linear-gradient(90deg, #E4795A, #FFBB41);
+
+    filter: blur(50px);
+
+    animation: pulse 5s infinite alternate;
+} */
 
 /* Navigation Bar */
-a {
-    display: inline-block;
-}
-
-li, a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
-.navBar {
+.navbar {
     display: flex;
     position: fixed;    
-    padding: 16.5px 10%;    
+    padding: 12px 10%;  
+    align-items: center;  
     justify-content: space-between;
-    align-items: center;
     
     width: 100%;
     top: 0;
@@ -125,45 +134,155 @@ li, a {
     transition: ease-in-out 0.5s;
 }
 
-.navBarScrolled {
-    padding: 10px 10%;
+.navbar a {
+    background: transparent;
+}
+
+.navbarScrolled {
+    padding: 7px 10%;
     
     background-color: rgba(0, 0, 0, 0.925);
+
     box-shadow: 0px 5px 5cap black;
 }
 
 .navLogo {
+    height: 19px;
+
     cursor: none;
-    height: 22.5px;
-    max-width: 100vw;
-    transition: 0.7s;
-}
 
-.navLogo:hover {
-    transform: rotate(180deg) scale(1.2);
-}
+    transition: 1.5s ease, transform 0.7s ease;
 
-.navLinks {
-    list-style: none;
     overflow: hidden;
 }
 
-.navLinks li {
-    display: inline-block;
-    padding: 0px 20px;
-    margin-bottom: -7px;
-    transition: all 0.3s ease 0s;
+.navLogo:hover {
+    filter: brightness(2.8);
+    transform: rotate(180deg);
 }
 
-.navLinks li a {
-    color: #edf0f1;
+.navLogoScrolled {
+    opacity: 0%;
+    
+    transform: translateY(-100px);
+
+    transition: 
+        opacity 0.5s ease, 
+        transform 2s ease
+    ;
+
+    background: transparent;
+}
+
+.navLogo2 {
+    display: flex;
+    margin-top: 2px;
+    padding: 5px;
+    
+    height: 35px;
+
+    transition: ease 1s;
+
+    transform: translateY(-100px);
+
+    background: transparent;
+}
+
+.navLogo2:hover {
+    transform: scale(1.1);
+}
+
+.navContainer {
+    display: flex;
+    margin-top: -2px;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+
+    width: 810px;
+
+    list-style: none;
+    
+    overflow: hidden;
+
+    transition: 3s ease;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+}
+
+.navLinksScrolled {
+    opacity: 80%;
+    transition: opacity 1s ease;
+
+    background: transparent;
+}
+
+.section1, .section2 {
+    transition: 2s ease;
+}
+
+.section1 li,
+.section2 li  {
+    display: inline-block;
+    padding: 0px 30px;
+    
+    transition: all 0.3s ease;
+
+    background: transparent;
+}
+
+.section1 li a,
+.section2 li a  {
+    display: inline-block;
     position: relative;
-    display: inline-block;
-    transition: color 0.3s ease;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #edf0f1;
+    /* color: rgba(237, 240, 241, 0.5); */
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+
+    transition: all 0.5s ease;
+
+    background: transparent;
 }
 
-.navLinks li:hover a {
-    color: rgba(255, 255, 255, 0.5);
+.section1 li a:hover,
+.section2 li a:hover {
+    border-radius: 5px;
+
+    font-weight: 600;
+    letter-spacing: 3.5px;
+
+    color: transparent;
+    background: linear-gradient(90deg, #E4795A, #FFBB41);
+    -webkit-background-clip: text;
+}
+
+.section1Scrolled {
+    text-align: left;
+    
+    transform: translateX(-110px);
+
+    background: transparent;
+}
+
+.section2Scrolled {
+    text-align: right;
+    
+    transform: translateX(110px);
+
+    background: transparent;
 }
 
 .headerButtons {
@@ -172,48 +291,33 @@ li, a {
 }
 
 .login {
+    position: relative;
+    
     height: 35px;
     width: 85px;
 
     border: none;
-    border-radius: 10px;
 
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    
-    color: #edf0f1;
+    font-weight: 600;
+    font-size: 10px;
+
+    color: transparent;
     background: linear-gradient(90deg, #E4795A, #FFBB41);
+    -webkit-background-clip: text;
 
-    transition: ease 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transition: 
+        font-weight 0.5s ease, 
+        letter-spacing 0.5s ease, 
+        opacity 0.5s ease, 
+        transform 2s ease
+    ;
 }
 
-.login:active {
-    transform: scale(0.9);
-}
-
-.contactButton {
-    position: absolute;
-
-    margin: 0 -110px;
-
-    height: 35px;
-    width: 100px;
-
-    border: none;
-    border-radius: 10px;
-    
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    color: #edf0f1;
-
-    background: linear-gradient(45deg, #0D0D0D, #262626);
-
-    transition: ease 0.25s;
-}
-
-.contactButton::before {
+.login::before {
     content: "";
     position: absolute;
     top: 0;
@@ -232,8 +336,19 @@ li, a {
     pointer-events: none;
 }
 
-.contactButton:active {
+.login:hover {
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.login:active {
     transform: scale(0.9);
+}
+
+.loginScrolled {
+    opacity: 0%;
+
+    transform: translateY(-100px);
 }
 
 .menu {
@@ -276,7 +391,9 @@ li, a {
     background-color: transparent;
 }
 
-.landingText h2 {    
+.landingText h2 { 
+    margin-top: -10px;
+
     width: 80%;
 
     text-align: center;    
@@ -400,13 +517,15 @@ li, a {
 
     background-color: black;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .prodIntro img {
     height: 600px;
     
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .prodIntro h1 {
@@ -415,20 +534,22 @@ li, a {
     margin-top: 10px;
     align-items: center;
 
-    overflow: hidden;
-
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 80px;
 
     color: #edf0f1;
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .prodIntro span {
     margin-left: 15px;
     
     animation: ease-in-out colorChange 2s forwards;
+
+    overflow: hidden;
 }
 
 .prodIntro p {
@@ -445,6 +566,8 @@ li, a {
     font-size: 17px;
 
     color: #edf0f1;
+
+    overflow: hidden;
 }
 
 /* Our Product: Statistics */
@@ -559,9 +682,10 @@ li, a {
     justify-content: center;
 
     height: 70px;
-    width: 50%;
 
+    text-wrap: nowrap;
     text-align: center;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: 500;
@@ -590,6 +714,7 @@ li, a {
     display: flex;    
     padding: 30px;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
 
     margin-top: 10px;
@@ -614,6 +739,7 @@ li, a {
     display: flex;
     padding: 30px;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
 
     margin-top: 10px;
@@ -640,8 +766,8 @@ li, a {
     align-items: center;
     justify-content: center;
     
-    height: 75vh;
-    width: 55vw;
+    height: 565px;
+    width: 886px;
 
     background-color: #316FF6;
 
@@ -653,8 +779,8 @@ li, a {
     align-items: center;
     justify-content: center;
 
-    height: 75vh;
-    width: 40vw;
+    height: 565px;
+    width: 615px;
 
     background-color: #39ff5a;
 
@@ -666,8 +792,8 @@ li, a {
     align-items: center;
     justify-content: center;
 
-    height: 75vh;
-    width: 40vw;
+    height: 565px;
+    width: 605px;
 
     background-color: #0077B5;
 
@@ -679,8 +805,8 @@ li, a {
     align-items: center;
     justify-content: center;
 
-    height: 75vh;
-    width: 60vw;
+    height: 565px;
+    width: 907px;
     
     background: linear-gradient(115deg, #6228d7, #ee2a7b, #f9ce34);
 
@@ -689,8 +815,12 @@ li, a {
 
 .demoVideo1 {
     display: flex;
-    height: 62vh;
-    width: 20vw;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+
+    height: 475px;
+    width: 300px;
 
     background-color: black;
     filter: drop-shadow(0 10px 18px rgba(30, 30, 30, 0.5));
@@ -710,8 +840,12 @@ li, a {
 
 .demoVideo2 {
     display: flex;
-    height: 55vh;
-    width: 16vw;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+
+    height: 413px;
+    width: 242px;
 
     background-color: black;
     filter: drop-shadow(0 10px 18px rgba(30, 30, 30, 0.5));
@@ -731,8 +865,12 @@ li, a {
 
 .demoVideo3 {
     display: flex;
-    height: 52vh;
-    width: 18vw;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+
+    height: 391px;
+    width: 272px;
 
     background-color: black;
     filter: drop-shadow(0 10px 18px rgba(30, 30, 30, 0.5));
@@ -752,8 +890,12 @@ li, a {
 
 .demoVideo4 {
     display: flex;
-    height: 58vh;
-    width: 40vw;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+
+    height: 435px;
+    width: 604px;
 
     background-color: black;
     filter: drop-shadow(0 10px 18px rgba(30, 30, 30, 0.5));
@@ -769,6 +911,14 @@ li, a {
 
 .demoVideo4:active {
     transform: scale(0.95);
+}
+
+.demoVideo4 img {
+    height: 100%;
+
+    border-radius: 40px;
+
+    transition: ease 0.5s;
 }
 
 /* Compatibilty */
@@ -1125,7 +1275,7 @@ li, a {
 .entryAreaInput:valid + .labelLine {
     padding: 0 12px;
 
-    color: #E4795A;
+    color: rgba(237, 240, 241, 0.6);
     
     line-height: 30px;
     
@@ -1180,7 +1330,10 @@ li, a {
     
     .menu {
         display: flex;
-        height: 20px;
+        
+        height: 15px;
+
+        opacity: 45%;
     }
 
     .landingText h1 {
