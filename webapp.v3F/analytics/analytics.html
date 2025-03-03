@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="analytics.js"></script>
+    <link rel="stylesheet" href="analytics.css">
+
+    <title>Analytics</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/aime.png">
+</head>
+
+<body>
+    <!-- Chart.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+
+    <!-- Page Foundation -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebarContainer">
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="images/aime.png">
+                </div>
+
+                <div class="bannerContainer">
+                    <div class="banner">
+                        <img src="images/sidebar/banner.png">
+                        <!-- <i class="material-symbols-outlined">camera</i> -->
+                    </div>
+                </div>
+
+                <div class="listContainer">
+                    <div class="list">
+                        <li class="subheading collapse">
+                            <h1>Main</h1>
+
+                            <i class="material-symbols-outlined">remove</i>
+                        </li>
+
+                        <a href="/./dashboard/index.html">
+                            <li class="inSelection inSelection-1">
+                                <div class="listText">
+                                    <i class="material-symbols-outlined">view_agenda</i>
+                                    <h1 class="collapse">Dashboard</h1>
+                                </div>
+    
+                                <div class="dropdown collapse">
+                                    <i class="material-symbols-outlined">chevron_left</i>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="/./campaigns/campaigns.html">
+                            <li class="inSelection inSelection-2">
+                                <div class="listText">
+                                    <i class="material-symbols-outlined">campaign</i>
+                                    <h1 class="collapse">Campaigns</h1>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="/./my-ai/my-ai.html">
+                            <li class="inSelection inSelection-3">
+                                <div class="listText">
+                                    <i class="material-symbols-outlined">robot_2</i>
+                                    <h1 class="collapse">myAi</h1>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="/./analytics/analytics.html">
+                            <li class="inSelection inSelection-4">
+                                <div class="listText">
+                                    <i class="material-symbols-outlined">analytics</i>
+                                    <h1 class="collapse">Analytics</h1>
+                                </div>
+                            </li>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="credits">
+                    <h1>Developed by <span>Zain Hafiz</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Foundation -->
+        <div class="main">
+            <nav>
+                <div class="upperNav">
+                    <div class="navContents">
+                        <div class="navContent menuToggle">
+                            <i class="material-symbols-outlined">menu</i>
+                        </div>
+    
+                        <div class="search">
+                            <div class="input">
+                                <div class="inputIcon">
+                                    <i class="material-symbols-outlined">search</i>
+                                </div>
+    
+                                <div class="inputFieldContainer">
+                                    <input class="inputField" type="text" minlength="4" maxlength="50" placeholder="Search"></input>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="navContent languageToggle navToggle">
+                            <img src="images/nav/flags/america.png" alt="america">
+    
+                            <div class="navList">
+                                <div class="navListItem item-1">
+                                    <img src="">
+                                </div>
+    
+                                <div class="navListItem item-2">
+                                    <img src="">
+                                </div>
+    
+                                <div class="navListItem item-3">
+                                    <img src="">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="navContent tasks navToggle">
+                            <i class="material-symbols-outlined">done_all</i>
+                        </div>
+    
+                        <div class="navContent apps navToggle">
+                            <i class="material-symbols-outlined">apps</i>
+                        </div>
+    
+                        <div class="navContent notifications navToggle">
+                            <i class="material-symbols-outlined">notifications</i>
+                        </div>
+    
+                        <div class="navContent inbox navToggle">
+                            <i class="material-symbols-outlined">inbox</i>
+                        </div>
+    
+                        <div class="navContent profile navToggle">
+                            <div class="profileBg">
+                                <div class="imageContainer">
+                                    <img src="images/nav/profile.png">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Mobile -->
+                        <div class="navContent logo-mobile">
+                            <a href="/./analytics/analytics.html">
+                                <img src="images/aime.png">
+                            </a>
+                        </div>
+    
+                        <div class="navContent aPr-mobile">
+                            <div class="apps-mobile">
+                                <i class="material-symbols-outlined">apps</i>
+                            </div>
+    
+                            <div class="profile-mobile">
+                                <div class="profileBg">
+                                    <div class="imageContainer">
+                                        <img src="images/nav/profile.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero">
+                <div class="directory">
+                    <div class="directoryContent">
+                        <div class="directoryText">
+                            <div class="header">
+                                <div class="headerText">
+                                    <h1>Analytics</h1>
+                                </div>
+
+                                <div class="headerList">
+                                    <a href="/./dashboard/index.html">
+                                        <div class="headerListItem item-1">
+                                            <h1>Dashboard</h1>
+                                        </div>
+                                    </a>
+
+                                    <a href="/./campaigns/campaigns.html">
+                                        <div class="headerListItem item-2">
+                                            <h1>Campaigns</h1>
+                                        </div>
+                                    </a>
+
+                                    <a href="/./analytics/">
+                                        <div class="headerListItem item-3">
+                                            <h1>Analytics</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="description">
+                                <i class="material-symbols-outlined">campaign</i>
+                                <h2>Create and manage your campaigns here</h2>
+                            </div>
+                        </div>
+
+                        <div class="settings">
+                            <a href="../settings/settings.html">
+                                <button>
+                                    <i class="material-symbols-outlined">settings</i>
+                                </button>                                
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foundation">
+                    <div class="row-1">
+                        <div class="buttons">
+                            <div class="button"></div>
+                            <div class="button"></div>
+                            <div class="button"></div>
+                            <div class="button"></div>
+                            <div class="button"></div>
+                            <div class="button"></div>
+                        </div>
+                    </div>
+
+                    <div class="row-2">
+                        <div class="visualContainer">
+
+                        </div>
+                    </div>
+
+                    <div class="row-3">
+                        <div class="tableContainer">
+                            <div class="tableColumns">
+                                <div class="tableColumn">
+                                    <div class="tableRows">
+                                        <div class="tableRow tRow-1">
+                                            <h1>Date</h1>
+                                        </div>
+
+                                        <div class="tableRow row-2">
+                                            <h1>Question</h1>
+                                        </div>
+
+                                        <div class="tableRow gRow">
+                                            <div class="row-3">
+                                                <div class="status" style="background-color: var(--green-bg);">
+                                                    <h1 style="color: var(--green-text);">Resolved</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="row-4">
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-1.png">
+                                                </div>
+
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-2.jpg">
+                                                </div>
+
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-3.png">
+                                                </div>
+                                            </div>
+
+                                            <div class="row-5">
+                                                <i class="material-symbols-outlined">reply</i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tableRows">
+                                        <div class="tableRow tRow-1">
+                                            <h1>Date</h1>
+                                        </div>
+
+                                        <div class="tableRow row-2">
+                                            <h1>Question</h1>
+                                        </div>
+
+                                        <div class="tableRow gRow">
+                                            <div class="row-3">
+                                                <div class="status" style="background-color: var(--yellow-bg);">
+                                                    <h1 style="color: var(--yellow-text);">Action Req</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="row-4">
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-1.png">
+                                                </div>
+
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-2.jpg">
+                                                </div>
+                                            </div>
+
+                                            <div class="row-5">
+                                                <i class="material-symbols-outlined">reply</i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tableRows">
+                                        <div class="tableRow tRow-1">
+                                            <h1>Date</h1>
+                                        </div>
+
+                                        <div class="tableRow row-2">
+                                            <h1>Question</h1>
+                                        </div>
+
+                                        <div class="tableRow gRow">
+                                            <div class="row-3">
+                                                <div class="status" style="background-color: var(--red-bg);">
+                                                    <h1 style="color: var(--red-text);">Urgent</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="row-4">
+                                                <div class="userProfile">
+                                                    <img src="/./my-ai/images/table/profile-1.png">
+                                                </div>
+                                            </div>
+
+                                            <div class="row-5">
+                                                <i class="material-symbols-outlined">reply</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-toggle">
+                <i class="material-symbols-outlined">contrast</i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
