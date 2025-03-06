@@ -1228,6 +1228,8 @@ nav {
 .visualContainers {
     display: flex;
 
+    margin: 0 0 0 10px;
+
     gap: 15px;
 }
 
@@ -1376,6 +1378,34 @@ nav {
 
 .theme-toggle i {
     color: #181B1E;
+}
+
+/* Media Queries: Larger Laptops */
+@media (min-width: 1501px) and (max-width: 1700px) {
+    .blockMetrics .text {
+        padding: 20px 5px;
+
+        height: fit-content;
+    }
+
+    .blockMetrics .extra .metric {
+        padding: 5px 10px;
+    }
+    
+    .blockMetric .metricText h1 {
+        font-size: 8px;
+        text-wrap: wrap;
+    }
+    
+    .blockMetric .metricText i {
+        font-size: 15px;
+    }
+    
+    .visualContainers {
+        display: flex;
+    
+        gap: 10px;
+    }
 }
 
 /* Media Queries: Smaller Laptops */
