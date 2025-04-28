@@ -1,6 +1,6 @@
 Copyright © 2025 Zain Hafiz
 
-This software and its associated documentation (the “Software”) are the original work of Zain Hafiz. Permission is granted to *AiME Technologies* [Artificial Intelligence Messaging Enterprise LLC.] to use this Software, subject to the following conditions:
+This software and its associated documentation (the “Software”) are the original work and property of Zain Hafiz. Permission is granted to *AiME Technologies* [Artificial Intelligence Messaging Enterprise LLC.] to use this Software, subject to the following conditions:
 
 - The right to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software is granted solely under the condition that **this copyright notice and author attribution remain clearly included and unaltered in all copies or substantial portions of the Software**. In other words, references to the author should remain unaltered and visible in the provided Software, in order to avoid breaching compliance.
 
